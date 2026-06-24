@@ -1,0 +1,24 @@
+Simulador de atendimento IA
+Desenvolvido por: GuedesAI • Linha de IA e Automação da Guedes growth
+
+Objetivo: Criar um espaço para que as pessoas consigam testar sendo atendidas por uma IA
+
+Especificações técnicas:
+- Precisa ter um painel de admin para que eu consiga configurar a ia de atendimento de acordo com o negócio do lead. 
+- Ao final da configuração deverá ter um link compartilhável para que o cliente consiga conversar como se fosse um painel de conversa do chatgpt
+- Internamente o admin consegue colocar regras que estarão presentes em TODOS prompts.
+- Painel simples que o ADMIN consiga ver todos agentes criados, consiga editar e compartilhar link
+- Irá usar API que irei disponibilizar para ser usado nos agentes. gpt 4.1mini prioridade de uso
+- Na tela compartilhada do cliente tenha um botão para entrar em contato caso desejar ver
+- NO primeiro acesso do cliente após 60 segundos um popup para coleta de contato (nome, email e whatsapp) aparece e só sai se preenchido. o cta será de "para continuar o seu teste preencha os dados abaixo).
+- O cliente tbm poderá editar o agente clicando em algum ícone ou botão com uma instrução de que ele pode editar o agente a sua maneira
+- Na configuração no momento da criação deverá ter campos de fácil entendimento para colocar: Nome do atendente se desejar, detalhes dos serviços oferecidos, contatos, horário de atendimento, endereço, espaço aberto para especificações do atendimento
+
+Especificações em ui design:
+- Tela limpa sem muita informação , principalmente para o link compartilhável
+- Usar CTAS em azul e fundo da página em tom de bege.
+- Não usar fonte serifadas
+- Seguir como inspiração as imagens enviadas
+
+API open ai: (chave configurada no .env.local)
+
