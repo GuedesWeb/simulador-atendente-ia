@@ -72,6 +72,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Enviar para o webhook do n8n (não bloqueante — se falhar, o lead já foi salvo)
+    const webhookUrl = 'https://n8n.guedesia.com.br/webhook/446db4b2-cdb5-4a70-80a7-3e4e7e6a603c';
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        id,
+        agentId,
+        name: name.trim(),
+        email: email.trim(),
+        whatsapp: whatsapp.trim(),
+        timestamp: new Date().toISOString(),
+      }),
+    }).catch((err) => {
+      console.error('Erro ao enviar lead para webhook:', err);
+    });
+
     return NextResponse.json({ id }, { status: 201 });
   } catch (error) {
     console.error('Erro ao capturar lead:', error);
